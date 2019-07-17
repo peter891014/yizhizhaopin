@@ -1,0 +1,60 @@
+<!-- <view class="cell" wx:if="{{addressList.length == 0}}">
+	<text>地址</text>
+	<text class="area_select" bindtap="bindCreateNew">请先添加地址</text>
+</view>
+<view class="cell" wx:else>
+	<text>地址</text>
+	<picker bindchange="bindPickerChange" value="{{index}}" range="{{addressList}}">
+		{{addressList[addressIndex]}}
+	</picker>
+</view>
+<view class="cell">
+	<text>金额</text>
+	<text class="amount">{{amount}}</text>
+</view>
+<button class="submit" type="primary" bindtap="confirmOrder">提交订单</button> -->
+<form report-submit="true" bindsubmit="confirmOrder">
+    <view class="address-container">
+        <!-- 用户尚未添加地址时 -->
+        <view class="item" bindtap="selectAddress" wx:if="{{!address}}">
+            <image src="/images/location.png" class="location" />
+            <view class="title">请选择一个收货地址</view>
+            <view class="arrow"></view>
+        </view>
+        <!-- 用户已添加过地址 -->
+        <view class="item" wx:else>
+            <image src="/images/location.png" class="location" />
+            <view class="bd" bindtap="selectAddress">
+                <view class="receiver">
+                    <view class="firstname">{{address.realname}}</view>
+                    <view class="gender">{{address.mobile}}</view>
+                </view>
+                <view class="detail">{{address.detail}}</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
+        <image src="/images/mail.png" class="mail" mode="widthFix" class="mail" />
+    </view>
+    <view class="info">
+        <!-- 清单 -->
+        <view class="list">
+            <view class="item" wx:for="{{carts}}" wx:key="">
+                <view class="left">
+                    <image src="{{item.goods.avatar}}" mode="aspectFill" />
+                </view>
+                <view class="right">
+                    <view class="title">{{item.goods.title}}</view>
+                    <view class="summary">
+                        <view class="quantity">{{item.quantity}}</view>
+                        <view class="price">{{item.goods.price}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 提交订单 -->
+    <view class="footer">
+        <view class="payment">{{amount}}</view>
+        <button class="checkout" type="primary" form-type="submit">提交订单</button>
+    </view>
+</form>

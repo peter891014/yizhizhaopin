@@ -1,0 +1,49 @@
+<view class="tableviewcell">
+  <view bindtap="navigateToAddress" class="left_index">
+    <image style="" src="../../images/yizhi/index/address@2x.png" />
+    <text class="">苏州 工业园区</text>
+
+  </view>
+  <view class="right_index">
+    <image class="" src="../../images/yizhi/index/设置@2x.png" />
+    <input class="" placeholder="  搜索公司名称" />
+  </view>
+</view>
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height:450rpx;">
+  <block wx:for="{{banner}}" wx:key="">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFill" class="swiper-image" bindtap="showGoods" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- <view class="tableviewcellonerow">
+  <view bindtap="navigateToAddress" class="left_index">
+    <image  src="../../images/yizhi/index/address@2x.png" style="padding-right:20rpx;" />
+    <text class="">苏州 工业园区1</text>
+   
+  </view>
+  <view bindtap="navigateToAddress" class="right_index">
+   
+    <text style="">公告</text>
+   
+  </view>
+</view> -->
+<view class="tableviewcellonerow">
+  <view bindtap="navigateToAddress" class="left_index">
+    <image style="" src="../../images/yizhi/index/address@2x.png" />
+    <text class="">苏州 工业园区2</text>
+
+  </view>
+  <view class="right_index">
+   
+   <text style="color:#411ED1;">公告</text>
+  </view>
+</view>
+ 
+   <view class="borderout"  >
+    <button class='borderoutleft' >今日招聘</button> 
+    <button class='borderoutleft' >法务服务</button> 
+  
+  </view>
+  <button wx:if="{{userInfo}}" bindtap="logout" type="warn" class="logout">退出登录</button>

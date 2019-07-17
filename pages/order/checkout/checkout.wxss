@@ -1,0 +1,306 @@
+.amount:before {
+	content: '￥';	
+}
+
+.submit {
+	margin: 8px;
+}
+
+/*单元格*/
+.cell {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items:center;
+	margin: 4px;
+	border-bottom: 1px solid #eee;
+	line-height: 28px;
+}
+
+.cell:last-child {
+	border-bottom: 0;
+}
+
+/*label显示字符*/
+.cell text:first-child {
+	width: 50px;
+}
+
+/*请先填写地址*/
+.area_select {
+	width: 100%;
+}
+
+/*选择器*/
+picker {
+	width: 60%;
+}
+
+
+/*用户地址项*/
+
+/*每一项*/
+.address-container .item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 5px 0;
+	border-bottom: 1px solid #ddd;
+	background: white;
+	margin-left: 0;
+	line-height: initial;
+}
+
+/*标题*/
+.address-container .item .title {
+	padding: 10px 0;
+}
+
+/*地理定位图标*/
+.address-container .item .location {
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*主体内容*/
+.address-container .item .bd {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/*收件人信息*/
+.address-container .item .bd .receiver {
+	color: black;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	margin: 10px 0;
+	margin-left: 10px;
+}
+
+/*姓氏*/
+.address-container .item .bd .receiver .firstname {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/*性别*/
+.address-container .item .bd .receiver .gender {
+	font-size: 12px;
+	margin: 0 10px;
+}
+
+/*手机号码*/
+.address-container .item .bd .receiver .mobile {
+	font-size: 12px;
+}
+
+/*收件地址*/
+.address-container .item .bd .detail {
+	color: #999;
+	font-size: 14px;
+	margin: 5px 0;
+	margin-left: 10px;
+}
+
+.amount:before {
+	content: '￥';	
+}
+
+.submit {
+	margin: 8px;
+}
+
+/*单元格*/
+.cell {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items:center;
+	margin: 4px;
+	border-bottom: 1px solid #eee;
+	line-height: 28px;
+}
+
+.cell:last-child {
+	border-bottom: 0;
+}
+
+/*label显示字符*/
+.cell text:first-child {
+	width: 50px;
+}
+
+/*请先填写地址*/
+.area_select {
+	width: 100%;
+}
+
+/*底部操作区域*/
+.footer {
+	display: flex;
+	flex-direction: row;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: white;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+}
+
+.footer .payment {
+	width: 70%;
+	background: #3d3d3f;
+	padding-left: 15px;
+}
+
+.footer .payment:before {
+	content: "待支付￥"
+}
+
+.footer .checkout {
+	width: 30%;
+	margin: 0;
+	background: #38ca73;
+	text-align: center;
+	box-sizing: initial;
+	border-radius: 0;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 100rpx;
+}
+
+.footer .checkout:after {
+	border: 0;
+}
+
+.mail {
+	width: 100%;
+}
+
+/*.底部操作区域*/
+
+ /* 商品列表 */
+ /*订单中商品列表*/
+
+/*清单*/
+.list {
+}
+
+/*增强行元素样式*/
+.item {
+	align-items: center;
+}
+
+/*商品名称*/
+.title {
+}
+
+.price:before {
+	content: "￥"
+}
+
+.left {
+	margin-left: 10px;
+}
+
+.left image {
+	width: 60px;
+	height: 60px;
+}
+
+.right .summary {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*数量*/
+.right .summary .quantity {
+	color: #999;
+	flex: 1.5;
+	margin-right: 5px;
+}
+
+.right .summary .quantity:before {
+	content: "× "
+}
+
+/*价格*/
+.right .summary .price {
+	margin-right: 5px;
+	color: red;
+}
+
+.right {
+	margin-left: 10px;
+}
+
+
+/*列表通用样式*/
+.item {
+	display: flex;
+	flex-direction: row;
+	line-height: 1.8;
+	color: #666;
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+	/*relative供arrow参照用*/
+	position: relative;
+	/*justify-content: space-between;*/
+}
+
+.item:last-child {
+	/*border-bottom: 0;*/
+}
+
+.arrow {
+	content: " ";
+	height: 6px;
+	width: 6px;
+	border-width: 2px 2px 0 0;
+	border-color: #ccc;
+	border-style: solid;
+	transform:rotate(45deg);
+	position: absolute;
+	margin-top: -4px;
+	top: 50%;
+	right: 15px;
+}
+
+/*配送费*/
+.express-label {
+	/*width: 90%;*/
+	margin-left: 10px;
+	flex: 9;
+}
+
+.express-fee {
+	/*width: 10%;*/
+	margin-right: 5px;
+	flex: 1;
+}
+
+.express-fee:before {
+	content: "￥"
+}
+
+.item .amount {
+	width: 100%;
+	text-align: right;
+	padding-right: 10px;
+}
+
+/*待支付*/
+.item .amount:before {
+	content: "总金额";
+}
+
+.item .amount:after {
+	content: "元";
+}
